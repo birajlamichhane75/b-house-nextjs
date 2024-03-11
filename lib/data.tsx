@@ -22,7 +22,7 @@ export const houseData: HouseType[] = [
             "https://greenhome-next.vercel.app/_next/image?url=%2Fphotos%2Fproperty9.jpg&w=1920&q=75"
         ],
         rent:500,
-        location: "Texas",
+        location: "Los Angelos",
         rooms: {
             bed: 1,
             bath: 2
@@ -86,7 +86,7 @@ export const houseData: HouseType[] = [
             "https://i.pinimg.com/originals/ed/7c/a6/ed7ca65c4e5e4a3f7f15b284dbc18c22.jpg"
         ],
         rent:400,
-        location: "London",
+        location: "California",
         rooms: {
             bed: 1,
             bath: 2
@@ -102,7 +102,7 @@ export const houseData: HouseType[] = [
             "https://th.bing.com/th/id/R.4890a77c0a8ce2244c0bb7042437b99a?rik=nLqhC210sQXNjQ&riu=http%3a%2f%2fhomesoftherich.net%2fwp-content%2fuploads%2f2016%2f01%2fScreen-Shot-2016-01-03-at-11.15.30-PM.png&ehk=dFX9RnevWWu0%2f0U4LAEoY%2fu8xPxM%2bCr4UONP3WijbAA%3d&risl=&pid=ImgRaw&r=0"
         ],
         rent:800,
-        location: "Illinios",
+        location: "Texas",
         rooms: {
             bed: 1,
             bath: 2

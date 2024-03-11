@@ -1,18 +1,38 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+"use client"
 import Image from 'next/image';
 import Link from 'next/link';
-import * as React from 'react';
+import  React, { useEffect, useRef } from 'react';
 import { PiHeartFill } from "react-icons/pi";
 import { HouseType } from '../lib/data';
+import { usePathname } from 'next/navigation';
+import { FaHouseCircleCheck } from "react-icons/fa6";
+import { useRouter } from 'next/navigation';
+
 const Homebox = ({name,img,rent,rooms,location}:HouseType) => {
+    let boxRef = useRef<HTMLInputElement>(null)
+    let pathname = usePathname();
+    let {push} = useRouter()
+
+    useEffect(() => {
+        if(pathname == "/book"){
+            if(boxRef.current){
+                boxRef.current.style.scale = ".7"
+            }
+        }
+    }, []);
     return (
         <>
-            <Link href="/listing">
-                <div className="housebox">
-                    <div className="himgbox">
+                <div ref ={boxRef}  className="housebox" onClick={()=>{
+                    push("/listing")
+                }}>
+                    <div  className="himgbox">
                         <Image src={img} alt="house" height={500} width={500} />
                         <h3 className="price">${rent}</h3>
                         <div className="heartbox">
-                            <PiHeartFill className='heart' />
+                            {
+                                pathname == "/book" ?<FaHouseCircleCheck className='book'/>:<PiHeartFill className='heart' />
+                            }
                         </div>
                     </div>
 
@@ -29,7 +49,6 @@ const Homebox = ({name,img,rent,rooms,location}:HouseType) => {
                         </div>
                     </div>
                 </div>
-            </Link>
         </>
     );
 }

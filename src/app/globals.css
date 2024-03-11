@@ -95,6 +95,8 @@ a {
     width: 8rem;
     cursor: pointer;
     margin: 0;
+    font-weight: 600;
+    color: rgb(184, 107, 255);
 }
 
 .nav-btn-l {
@@ -108,8 +110,11 @@ a {
     border-bottom-right-radius: 2rem;
     background-color: #ffffff;
 }
-
-/* Topic */
+.buttons{
+    border-radius:2rem ;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+    /* Topic */
 .topic {
     width: 100%;
     min-height: 25rem;
@@ -176,7 +181,7 @@ a {
     justify-content: flex-start;
     gap: 2rem;
     transition: .2s;
-
+    scale: 1;
 }
 
 .housebox:hover {
@@ -207,7 +212,16 @@ a {
     padding: 1rem;
 
 }
-
+.book{
+    font-size: 6.5rem;
+    color: green;
+    padding: 1rem;
+    margin: .5rem;
+}
+.booked{
+    font-size:5rem;
+    color: green;
+}
 .price {
     position: absolute;
     left: 2rem;

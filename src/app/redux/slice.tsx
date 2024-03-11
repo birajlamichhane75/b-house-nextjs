@@ -6,6 +6,8 @@ export type FilterDataType = {
     property:string,
     budget:string,
 }
+
+
 type InitialType = {
     filter:  FilterDataType[]
 }
@@ -21,7 +23,6 @@ const filterSlice = createSlice({
 
     reducers:{
         addFilter:(state,action)=>{
-            console.log(action);
             
             const filterData:FilterDataType = {
                 buyRent:action.payload.buyRent,
@@ -29,7 +30,7 @@ const filterSlice = createSlice({
                 property:action.payload.property,
                 budget:action.payload.budget,
             }
-            state.filter.push(filterData)
+            state.filter = [filterData]
             
         }
     }

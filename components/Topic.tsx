@@ -55,9 +55,8 @@ const Topic = ({topic}:TopicType) => {
                         
                     }}>
                         <option>Location</option>
-                        <option>New York</option>
                         <option>Texas</option>
-                        <option>London</option>
+                        <option>California</option>
                         <option>Los Angelos</option>
                     </select>
 
