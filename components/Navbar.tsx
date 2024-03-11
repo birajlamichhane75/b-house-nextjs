@@ -1,12 +1,19 @@
 import Link from 'next/link';
 import * as React from 'react';
+import { Rubik } from 'next/font/google';
+
+const rubik = Rubik({
+    weight:'600',
+    subsets:["latin"],
+    display:'swap'
+})
 
 const Navbar = () => {
     return ( 
         <>
         <div className="nav">
             <div className="nleft">
-                <h3>B-Home</h3>
+                <h3 className={rubik.className}>B-House</h3>
             </div>
             <div className="nright">
                 <ul>
