@@ -1,3 +1,5 @@
+/* eslint-disable react-hooks/rules-of-hooks */
+"use client"
 import * as React from 'react';
 import Topic from '../../../components/Topic';
 import Homebox from '../../../components/Homebox';
@@ -5,8 +7,10 @@ import { HouseType, houseData } from '../../../lib/data';
 import '../home/hstyle.css'
 import Image from 'next/image';
 import Footer from '../../../components/Footer';
+import { useRouter } from 'next/navigation';
 
 const home = () => {
+    let {push} = useRouter()
     return (
         <><Topic topic="FIND THE PROPERTY FOR RENT" />
             <div className="outer-container">
@@ -20,7 +24,9 @@ const home = () => {
 
                 </div>
 
-                <div className='search'><button className='btn'>View All</button></div>
+                <div className='search'><button className='btn' onClick={()=>{
+                    push("/listing")
+                }}>View All</button></div>
             </div>
 
             <div className="container-2">
