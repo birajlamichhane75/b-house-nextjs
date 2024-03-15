@@ -17,8 +17,8 @@ const home = () => {
                 <p className = "heading" style={{ textAlign: 'center', textTransform: 'uppercase' }}>Featured Listing</p>
                 <div className="container">
                     {
-                        houseData.map((e: HouseType) => {
-                            return <><Homebox name={e.name} img={e.img} rent={e.rent} location={e.location} rooms={e.rooms} /></>
+                        houseData.map((e: HouseType,i:number) => {
+                            return <Homebox key = {i} name={e.name} img={e.img} rent={e.rent} location={e.location} rooms={e.rooms} />
                         })
                     }
 

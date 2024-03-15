@@ -1,5 +1,6 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 "use client"
-import * as React from 'react';
+import React, { useEffect, useState } from 'react';
 import Topic from '../../../components/Topic';
 import { HouseType, houseData } from '../../../lib/data';
 import Homebox from '../../../components/Homebox';
@@ -15,11 +16,23 @@ type DataType = {
 }
 
 const List = () => {
+    const [buyRent, setbuyRent] = useState<string | undefined>();
+    const [price, setprice] = useState<string | undefined>();
+    const [location, setlocation] = useState<string | undefined>();
+    const [property, setproperty] = useState<string | undefined>();
 
     let { push } = useRouter();
     let fData: FilterDataType = useSelector((data: DataType): FilterDataType => {
+
         return data.filterData.filter[0]
     })
+    useEffect(() => {
+        if (fData) {
+            setbuyRent(fData.buyRent)
+            setlocation(fData.location)
+            setproperty(fData.property)
+        }
+    }, []);
 
 
     let filterdata = houseData.filter((e: HouseType) => {
@@ -33,12 +46,16 @@ const List = () => {
                 <div className="filter">
                     <form className="filterbox">
                         <div className="fhead">
-                            <p className = "heading" style={{ fontSize: 20, color: 'orange' }}>Filter Section</p>
+                            <p className="heading" style={{ fontSize: 20, color: 'orange' }}>Filter Section</p>
                         </div>
                         <div className="options">
                             <div className='choice'>
                                 <label><h4>Buy</h4></label>
-                                <select>
+                                <select
+                                    value={buyRent}
+                                    onChange={(e: React.ChangeEvent<HTMLSelectElement>) => {
+                                        setbuyRent(e.target.value)
+                                    }}>
                                     <option>Buy</option>
                                     <option>Rent</option>
                                 </select>
@@ -46,7 +63,11 @@ const List = () => {
 
                             <div className='choice'>
                                 <label><h4>Location</h4></label>
-                                <select>
+                                <select
+                                    value={location}
+                                    onChange={(e: React.ChangeEvent<HTMLSelectElement>) => {
+                                        setlocation(e.target.value)
+                                    }}>
                                     <option>New York</option>
                                     <option>Texas</option>
                                     <option>London</option>
@@ -56,7 +77,11 @@ const List = () => {
 
                             <div className='choice'>
                                 <label><h4>Property Type</h4></label>
-                                <select>
+                                <select
+                                    value={property}
+                                    onChange={(e: React.ChangeEvent<HTMLSelectElement>) => {
+                                        setproperty(e.target.value)
+                                    }}>
                                     <option>Apartment</option>
                                     <option>Villa</option>
                                 </select>
@@ -64,7 +89,14 @@ const List = () => {
 
                             <div className="budget choice">
                                 <label>Budget</label>
-                                <input type="range" />
+                                <div className='budget-bar'>
+                                    <input type="range" />
+                                    <div className="range">
+                                        <p>$0</p>
+                                        <p>$1000</p>
+                                    </div>
+                                </div>
+
                             </div>
 
                             <button type='submit' className='btn'>Search</button>
