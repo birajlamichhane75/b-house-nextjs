@@ -27,11 +27,10 @@ const List = () => {
         return data.filterData.filter[0]
     })
     useEffect(() => {
-        if (fData) {
-            setbuyRent(fData.buyRent)
-            setlocation(fData.location)
-            setproperty(fData.property)
-        }
+            setbuyRent(fData?.buyRent)
+            setlocation(fData?.location)
+            setproperty(fData?.property)
+        
     }, []);
 
 
