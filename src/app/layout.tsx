@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import { Providers } from "./redux/provider";
+import Facebookchat from "../../components/Facebookchat";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -25,6 +26,7 @@ export default function RootLayout({
         <div className="page">
           <Providers>
           {children}
+          <Facebookchat />
           </Providers>
         </div>
         
