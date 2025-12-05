@@ -1,36 +1,38 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# House Explorer
 
-## Getting Started
+## Overview
+House Explorer is a full-stack platform that lets users browse homes, filter listings, and book viewing appointments. It is designed to be fast, intuitive, and accessible for users exploring real estate options.
 
-First, run the development server:
+## Why This Project Matters
+People often struggle to compare properties quickly. This platform simplifies the process by offering powerful filters and a clean interface.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Key Features
+- Browse properties with detailed information  
+- Filter homes by location, price, and type  
+- Fast page loading with server-side rendering  
+- Clean reusable UI components  
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Screenshots
+(Add UI screenshots here)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Tech Stack
+Next.js  
+TypeScript  
+Redux Toolkit  
+MongoDB  
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## How to Use (Simple Explanation)
+1. Open the website  
+2. Use filters to narrow down homes  
+3. Click a property to view details  
+4. Request a viewing from the listing page  
 
-## Learn More
+## Behind the Scenes (Technical Notes)
+- Server-side rendering improves speed  
+- RESTful APIs return filtered home data  
+- MongoDB stores property listings  
+- Component architecture supports scalability  
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Future Improvements
+- Map-based property search  
+- User accounts for saved listings  
