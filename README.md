@@ -12,8 +12,6 @@ People often struggle to compare properties quickly. This platform simplifies th
 - Fast page loading with server-side rendering  
 - Clean reusable UI components  
 
-## Screenshots
-(Add UI screenshots here)
 
 ## Tech Stack
 Next.js  
